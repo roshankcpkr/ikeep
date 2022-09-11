@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>iKeep</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtMjM3Ljg4IDI1Ny42MWgyNzYuMjVjMTAuODk4IDAgMTkuNzM0IDguODM1OSAxOS43MzQgMTkuNzM0IDAgMTAuODk4LTguODM1OSAxOS43My0xOS43MzQgMTkuNzNoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODMyLTE5LjczNC0xOS43MyAwLTEwLjg5OCA4LjgzNTktMTkuNzM0IDE5LjczNC0xOS43MzR6bTAgOTguNjY0aDI3Ni4yNWMxMC44OTggMCAxOS43MzQgOC44MzIgMTkuNzM0IDE5Ljczcy04LjgzNTkgMTkuNzM0LTE5LjczNCAxOS43MzRoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODM1OS0xOS43MzQtMTkuNzM0czguODM1OS0xOS43MyAxOS43MzQtMTkuNzN6bTAgOTguNjZoMjc2LjI1YzEwLjg5OCAwIDE5LjczNCA4LjgzNTkgMTkuNzM0IDE5LjczNCAwIDEwLjg5OC04LjgzNTkgMTkuNzM0LTE5LjczNCAxOS43MzRoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODM1OS0xOS43MzQtMTkuNzM0IDAtMTAuODk4IDguODM1OS0xOS43MzQgMTkuNzM0LTE5LjczNHoiIGZpbGw9IiM5YjliOWIiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K" class="ham-icon"></li>
+                <li><img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" class="header-logo"></li>
+                <li><p class="header-title">Keep</p></li>
+                <li class="inputList">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                    <input type="text" placeholder="Search" class="searchbar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="modal">
+        <div class="modal-content">
+            <input type="text" placeholder="Title" class="modal-title">
+            <input type="text" placeholder="Take a note..." class="modal-text">
+            <span class="modal-close">Close</span>
+        </div>
+    </div>
+    <main>
+        <div id="form-container">
+            <section id="image-holder"></section>
+            <form id="form" autocomplete="off">
+                <input id="note-title" placeholder="Title" type="text">
+                <input id="note-text" placeholder="Take a note..." type="text">
+                <div id="form-buttons">
+                    <!-- <input type="file" id="file-input" accept="image/*"> -->
+                    <button type="submit" id="submit-button">Submit</button>
+                    <button type="button" id="form-close">Close</button>
+                </div>
+            </form>
+        </div>
+        <div id="notes">
+            
+        </div>
+        <div id="placeholder">
+            <img id="placeholder-img" src="./lightbulb.png">
+            <p id="placeholder-text">Notes you add appear here</p>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
