@@ -68,7 +68,7 @@ class App{
     render()
     {
         this.displayNote()
-        this.addEventListeners() 
+        this.saveNote() 
     }
     openForm(){
         this.noteTitle.style.display = "block"
