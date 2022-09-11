@@ -17,7 +17,7 @@ class App{
         this.modalText = document.querySelector('.modal-text')
         this.modalClose = document.querySelector('.modal-close')
         this.render()
-
+        this.addEventListeners()
     }
     addEventListeners()
     {
