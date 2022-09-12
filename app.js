@@ -16,8 +16,9 @@ class App{
         this.modalTitle = document.querySelector('.modal-title')
         this.modalText = document.querySelector('.modal-text')
         this.modalClose = document.querySelector('.modal-close')
+        this.searchBar = document.querySelector('.searchbar')
         this.render()
-
+        this.addEventListeners() 
     }
     addEventListeners()
     {
@@ -26,7 +27,8 @@ class App{
             this.selectNote(event)
             this.openModal(event)
             this.deleteNote(event)
-
+            this.closesModal(event)
+            
         })
         this.form.addEventListener("submit", event=>{
             event.preventDefault()
@@ -46,6 +48,11 @@ class App{
             event.stopPropagation()
             this.closeForm()
         })
+        this.searchBar.addEventListener("input", (event)=>{
+            event.preventDefault()
+            this.searchNote(event)
+        })
+
     }
     handleFormClick(event)
     {
@@ -67,8 +74,20 @@ class App{
     }
     render()
     {
-        this.displayNote()
-        this.addEventListeners() 
+        this.displayNote(this.notes)
+        this.saveNote()
+    }
+    searchNote(event)
+    {
+        
+        let searchInput = event.target.value.toLowerCase()
+        let newNotes = this.notes.filter((ele) =>{
+          if(ele.text.toLowerCase().includes(searchInput) || ele.title.toLowerCase().includes(searchInput) )
+          {
+            return ele
+          }
+        })
+        this.displayNote(newNotes)
     }
     openForm(){
         this.noteTitle.style.display = "block"
@@ -84,6 +103,13 @@ class App{
         this.noteTitle.value = ""
         this.noteText.value =""
 
+    }
+    closesModal(event)
+    {
+            if(event.target.closest('.modal') && !event.target.closest('.modal-content'))
+            {
+                this.closeModal(event)
+            }
     }
     closeModal(event)
     {
@@ -153,9 +179,9 @@ class App{
     {
         localStorage.setItem("notesHaru", JSON.stringify(this.notes))
     }
-    displayNote()
+    displayNote(noteArray)
     {
-        const haveNote = this.notes.length > 0
+        const haveNote = noteArray.length > 0
         if(haveNote)
         {
             this.placeholder.style.display = "none"
@@ -164,7 +190,7 @@ class App{
         else{
             this.placeholder.style.display = "flex"
         }
-        const noteHtml =  this.notes.map((el)=>{
+        const noteHtml =  noteArray.map((el)=>{
             return ` 
             <div class="note" style="background: ${el.color}" data-id = "${el.id}">
                 <div class="${el.title && 'note-title'}" >${el.title}</div>
