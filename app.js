@@ -87,6 +87,7 @@ class App{
             return ele
           }
         })
+        
         this.displayNote(newNotes)
     }
     openForm(){
