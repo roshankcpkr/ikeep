@@ -269,6 +269,9 @@ class App{
             }).join(' ')
             this.notesDiv.innerHTML = noteHtml
         }
+        else{
+            this.notesDiv.innerHTML = ""
+        }
 
     }
 
