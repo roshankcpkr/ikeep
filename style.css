@@ -334,11 +334,67 @@ nav ul{
     display: flex;
     padding: 0.3em;
     justify-content: flex-end;
+    position: relative;
 }
 #delete-icon
 {
     display: block;
+    margin-right: 0.5rem;
 }
 #delete-icon:hover{
     cursor: pointer;
+}
+
+#color-icon:hover{
+    cursor: pointer;
+}
+#color-tool
+{
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    z-index: 20;
+    height: 40px;
+    position: absolute;
+    width: 170px;
+    border: 1px solid black;
+    cursor: pointer;
+    background:#fff;
+    box-shadow: 0 1px 0px 0 rgba(60, 64, 67, 0.302),
+    0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    padding: 5px 4px;
+    display: none;
+    justify-content: space-between;
+    border-radius: 9px;
+}
+.color-option{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.color-option:hover{
+    border: 1px solid black;
+}
+#white{
+    background-color: #fff;
+}
+#red{
+    background-color: rgb(211, 35, 35);
+}
+#purple
+{
+    background-color: rgb(204, 16, 204);
+}
+#blue
+{
+    background-color: rgb(82, 82, 244);
+}
+#green{
+    background-color: green;
+}
+#yellow
+{
+    background-color: yellow;
 }

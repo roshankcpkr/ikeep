@@ -17,6 +17,7 @@ class App{
         this.modalText = document.querySelector('.modal-text')
         this.modalClose = document.querySelector('.modal-close')
         this.searchBar = document.querySelector('.searchbar')
+        this.colorTool = document.querySelector('#color-tool')
         this.render()
         this.addEventListeners() 
     }
@@ -40,6 +41,25 @@ class App{
                 this.addNote({title, text})
             }
         
+        })
+        document.body.addEventListener("mouseover", (event)=>{
+            this.openColorTool(event)
+        })
+        document.body.addEventListener("mouseout", (event)=>{
+            this.closeColorTool(event)
+        })
+        this.colorTool.addEventListener("mouseover" ,function(){
+                this.style.display = "flex";
+        })
+        this.colorTool.addEventListener("mouseout" ,function(){
+            this.style.display = "none";
+        })
+        this.colorTool.addEventListener("click", event=>{
+            const color = event.target.dataset.color
+            if(color)
+            {
+                this.editColor(color)
+            }
         })
         this.modalClose.addEventListener("click", (event)=>{
             this.closeModal(event)
@@ -95,6 +115,31 @@ class App{
         this.formButton.style.display = "block"
         this.form.classList.add("form-open")
 
+    }
+    openColorTool(event)
+    {
+        if(!event.target.matches('#color-icon'))
+        return
+        this.id = event.target.dataset.id
+        const coord = event.target.getBoundingClientRect()
+        const horizontal = coord.left 
+        const vertical = coord.top 
+        this.colorTool.style.transform = `translate(${horizontal}px , ${vertical}px)`
+        this.colorTool.style.display = "flex"
+    }
+    closeColorTool(event){
+        if(!event.target.matches('#color-icon'))
+        return 
+        this.colorTool.style.display = "none"
+    }
+    editColor(color)
+    {
+        console.log(this.id)
+       this.notes =  this.notes.map(el=>{
+            return el.id === Number(this.id) ? {...el, color } : el
+        })
+        console.log(this.notes)
+        this.render()
     }
     closeForm()
     {
@@ -197,9 +242,12 @@ class App{
                 <div class="${el.title && 'note-title'}" >${el.title}</div>
                 <div class="note-text">${el.text}</div>
                 <div class="tools">
-                <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
-                        delete
-                </span>
+                    <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
+                            delete
+                    </span>
+                    <span class="material-symbols-outlined" id="color-icon" data-id = "${el.id}">
+                    palette
+                    </span>
                 </div>
             </div>
             
