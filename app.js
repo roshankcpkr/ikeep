@@ -94,8 +94,9 @@ class App{
     }
     render()
     {
-        this.displayNote(this.notes)
+        
         this.saveNote()
+        this.displayNote(this.notes)
     }
     searchNote(event)
     {
@@ -138,7 +139,6 @@ class App{
        this.notes =  this.notes.map(el=>{
             return el.id === Number(this.id) ? {...el, color } : el
         })
-        console.log(this.notes)
         this.render()
     }
     closeForm()
@@ -182,8 +182,15 @@ class App{
         if(event.target.closest('.note') && !event.target.matches('#delete-icon'))
         {
             this.modal.classList.toggle('openModal')
-            this.modalTitle.value = this.noteTitleValue
-            this.modalText.value = this.noteTextValue
+            console.log(this.notes)
+            const selectedElement = this.notes.filter((element)=>{
+                if(Number(this.id) === element.id)
+                {
+                    return element
+                }
+            })[0]
+            this.modalTitle.value = selectedElement.title
+            this.modalText.value = selectedElement.text
         }
     }
     addNote(note)
@@ -230,30 +237,39 @@ class App{
         const haveNote = noteArray.length > 0
         if(haveNote)
         {
+            
             this.placeholder.style.display = "none"
             
         }
         else{
             this.placeholder.style.display = "flex"
         }
-        const noteHtml =  noteArray.map((el)=>{
-            return ` 
-            <div class="note" style="background: ${el.color}" data-id = "${el.id}">
-                <div class="${el.title && 'note-title'}" >${el.title}</div>
-                <div class="note-text">${el.text}</div>
-                <div class="tools">
-                    <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
-                            delete
-                    </span>
-                    <span class="material-symbols-outlined" id="color-icon" data-id = "${el.id}">
-                    palette
-                    </span>
+        if (haveNote){
+            const noteHtml =  noteArray.map((el)=>{
+                const lenOfChar = el.text.split(" ")
+                const textWord = lenOfChar.length > 50 ? lenOfChar.slice(0, 60) : lenOfChar
+                const limitedArray = textWord.map((els)=>{
+                    return els
+                }).join(" ")
+                return ` 
+                <div class="note" style="background: ${el.color}" data-id = "${el.id}">
+                    <div class="${el.title && 'note-title'}" >${el.title}</div>
+                    <div class="note-text">${limitedArray}</div>
+                    <div class="tools">
+                        <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
+                                delete
+                        </span>
+                        <span class="material-symbols-outlined" id="color-icon" data-id = "${el.id}">
+                        palette
+                        </span>
+                    </div>
                 </div>
-            </div>
-            
-            `
-        }).join(' ')
-        this.notesDiv.innerHTML = noteHtml
+                
+                `
+            }).join(' ')
+            this.notesDiv.innerHTML = noteHtml
+        }
+
     }
 
 }

@@ -262,6 +262,9 @@ input:focus{
     padding: 1rem 1.5rem;
     width: 25rem;
     border-radius: 10px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
 }
 .modal-title
@@ -283,10 +286,12 @@ input:focus{
     margin: 0 6px;
     font-weight: 500;
     border: 0;
-    overflow: hidden;
     position: relative;
+    height: 100%;
+    overflow: auto;
     font-size: 1rem;
     line-height: 1.5rem;
+    outline: none;
     padding-bottom: 10px;
 }
 .modal-close
@@ -299,6 +304,7 @@ input:focus{
     cursor: pointer;
     overflow: hidden;
     height: 2rem;
+    align-self: flex-end;
 }
 nav{
     width: 100%;
