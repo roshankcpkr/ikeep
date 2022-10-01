@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* theme switcher styles start */
 :root {
   --primary-color: #fdfdfd;
   --secondary-color: #0b0c0d;
@@ -44,7 +45,7 @@ body,
 
 .note {
   background-color: var(--primary-color);
-  color: var(--secondary-color) !important;
+  color: var(--secondary-color);
 }
 
 html,
