@@ -407,7 +407,9 @@ nav ul{
 #pink
 {
     background-color: rgb(255, 95, 240);
-footer{
+}
+footer
+{
     width: 100%
     position: absolute;
     bottom: 0;
