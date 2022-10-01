@@ -5,5 +5,6 @@ An google keep clone made with vanilla html, css and javascript. It is a note ke
 2. I want help to add new suitable features.
 3. I am looking for add features to add image url into notes and store url as string on localstorage.
 4. I am looking for opensource contribution to add timestamp for when note was added and editing.
+5. I want help to make hamburger icon functional by adding additional menu items as sidebar.
 
 More ideas and contributions are welcomed. You can help me add better designs. 
