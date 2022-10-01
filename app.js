@@ -21,6 +21,11 @@ class App{
         this.render()
         this.addEventListeners() 
     }
+    htmlEncode(str) {
+        return String(str).replace(/[^\w. ]/gi, function(c) {
+            return '&#' + c.charCodeAt(0) + ';';
+        });
+    }
     addEventListeners()
     {
         document.body.addEventListener('click', event=>{
@@ -254,7 +259,7 @@ class App{
                 return ` 
                 <div class="note" style="background: ${el.color}" data-id = "${el.id}">
                     <div class="${el.title && 'note-title'}" >${el.title}</div>
-                    <div class="note-text">${limitedArray}</div>
+                    <div class="note-text">${this.htmlEncode(limitedArray)}</div>
                     <div class="tools">
                         <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
                                 delete
