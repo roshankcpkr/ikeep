@@ -407,6 +407,11 @@ nav ul{
 #pink
 {
     background-color: rgb(255, 95, 240);
+footer{
+    width: 100%
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 #neon
 {
     background-color:  rgb(120, 255, 1);
