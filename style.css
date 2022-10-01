@@ -404,3 +404,7 @@ nav ul{
 {
     background-color: yellow;
 }
+footer{
+    position: absolute;
+    bottom:0;
+}
