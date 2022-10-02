@@ -277,3 +277,10 @@ class App{
 
 }
 new App()
+
+
+
+// for auto input focus
+document.getElementById('search_icon').addEventListener('click',(()=>{
+    document.getElementById('search_bar').focus()
+}))

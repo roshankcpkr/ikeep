@@ -210,13 +210,33 @@ input:focus {
   filter: brightness(95%);
   cursor: pointer;
 }
-#white {
-  background: white;
+#orange {
+    background: #fbbc04;
+  }
+  
+  #teal {
+    background: #a7ffeb;
+  }
+  
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px;
+    width: 250px;
+    height: fit-content;
+    background-color: #fff;
+    border-color: #e0e0e0;
+    border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    transition-duration: 0.21s;
+    transition-property: background, border, opacity, box-shadow, transform;
+    transition-timing-function: ease-in;
 }
 
-#purple {
-  background: #d7aefb;
-}
 .note:hover{
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
@@ -488,4 +508,8 @@ footer
 #neon
 {
     background-color:  rgb(120, 255, 1);
+}
+
+#search_icon{
+    cursor: pointer;
 }
