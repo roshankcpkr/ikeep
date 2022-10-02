@@ -18,9 +18,6 @@ if (theme === "dark") {
   path.style.display = "none";
   theme = "light";
   defaultColor.setAttribute("data-color", "black");
-  notes.forEach((note) => {
-    note.style.backgroundColor = "black";
-  });
 } else {
     localStorage.setItem("theme", "light");
     document.querySelector("body").removeAttribute("data-theme", "dark");
@@ -29,10 +26,6 @@ if (theme === "dark") {
     path.style.display = "block";
     theme = "dark";
     defaultColor.setAttribute("data-color", "white");
-    notes.forEach((note) => {
-        note.style.backgroundColor = "white";
-        note.style.color = "black";
-    });
 }
 
 btn.addEventListener("click", () => {
@@ -44,30 +37,18 @@ btn.addEventListener("click", () => {
         path.style.display = "none";
         theme = "light";
         defaultColor.setAttribute("data-color", "black");
-        notes.forEach((note) => {
-            note.style.backgroundColor = "black";
-            note.style.color = "black";
-        });
     } else {
         localStorage.setItem("theme", "light");
-    document.querySelector("body").removeAttribute("data-theme", "dark");
-    svg.setAttribute("stroke", "#212121");
-    group.style.display = "none";
-    path.style.display = "block";
-    theme = "dark";
-    defaultColor.setAttribute("data-color", "white");
-    notes.forEach((note) => {
-        note.style.backgroundColor = "white";
-        note.style.color = "black";
-    });
-}
+        document.querySelector("body").removeAttribute("data-theme", "dark");
+        svg.setAttribute("stroke", "#212121");
+        group.style.display = "none";
+        path.style.display = "block";
+        theme = "dark";
+        defaultColor.setAttribute("data-color", "white");
+    }
 });
 
 if (theme === "undefined") {
     theme = "light";
     defaultColor.setAttribute("data-color", "white");
-    notes.forEach((note) => {
-      note.style.backgroundColor = "white";
-      note.style.color = "black";
-    });
 };
