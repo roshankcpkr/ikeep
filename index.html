@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <title>iKeep</title>
 </head>
 <body>
@@ -25,6 +24,40 @@
                 </li>
             </ul>
         </nav>
+        <div class="theme-container">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="svg theme"
+                id="switch"
+              >
+                <g>
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </g>
+                <path
+                  class="path"
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  style="display: none"
+                ></path>
+              </svg>
+            </div>
+        </div>
     </header>
     <div class="modal">
         <div class="modal-content">
@@ -58,7 +91,7 @@
             <div class="color-option" data-color="rgb(255, 95, 240)" id="pink"></div>
             <div class="color-option" data-color="rgb(120, 255, 1 )" id="neon"></div>
             <div class="color-option" data-color="rgb(211, 35, 35)" id="red"></div>
-            <div class="color-option" data-color="white" id="white"></div>
+            <div class="color-option" id="default"></div>
             <div class="color-option" data-color="rgb(204, 16, 204)" id="purple"></div>
             <div class="color-option" data-color="green" id="green"></div>
             <div class="color-option" data-color="rgb(82, 82, 244)" id="blue"></div>
@@ -69,5 +102,6 @@
         <p>&copy; Yagami</p>
     </footer>
     <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
