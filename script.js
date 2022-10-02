@@ -46,6 +46,7 @@ btn.addEventListener("click", () => {
         defaultColor.setAttribute("data-color", "black");
         notes.forEach((note) => {
             note.style.backgroundColor = "black";
+            note.style.color = "black";
         });
     } else {
         localStorage.setItem("theme", "light");
@@ -57,6 +58,7 @@ btn.addEventListener("click", () => {
     defaultColor.setAttribute("data-color", "white");
     notes.forEach((note) => {
         note.style.backgroundColor = "white";
+        note.style.color = "black";
     });
 }
 });
@@ -66,5 +68,6 @@ if (theme === "undefined") {
     defaultColor.setAttribute("data-color", "white");
     notes.forEach((note) => {
       note.style.backgroundColor = "white";
+      note.style.color = "black";
     });
 };
