@@ -434,4 +434,54 @@ nav ul {
 }
 #yellow {
   background-color: yellow;
+    padding: 5px 4px;
+    display: none;
+    justify-content: space-between;
+    border-radius: 9px;
+}
+.color-option{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.color-option:hover{
+    border: 1px solid black;
+}
+#white{
+    background-color: #fff;
+}
+#red{
+    background-color: rgb(211, 35, 35);
+}
+#purple
+{
+    background-color: rgb(204, 16, 204);
+}
+#blue
+{
+    background-color: rgb(82, 82, 244);
+}
+#green{
+    background-color: green;
+}
+#yellow
+{
+    background-color: yellow;
+}
+#pink
+{
+    background-color: rgb(255, 95, 240);
+}
+footer
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+#neon
+{
+    background-color:  rgb(120, 255, 1);
 }
