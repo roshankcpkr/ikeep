@@ -21,11 +21,6 @@ class App{
         this.render()
         this.addEventListeners() 
     }
-    htmlEncode(str) {
-        return String(str).replace(/[^\w. ]/gi, function(c) {
-            return '&#' + c.charCodeAt(0) + ';';
-        });
-    }
     addEventListeners()
     {
         document.body.addEventListener('click', event=>{
@@ -54,7 +49,7 @@ class App{
             this.closeColorTool(event)
         })
         this.colorTool.addEventListener("mouseover" ,function(){
-                this.style.display = "flex";
+            this.style.display = "flex";
         })
         this.colorTool.addEventListener("mouseout" ,function(){
             this.style.display = "none";
@@ -128,6 +123,7 @@ class App{
         return
         this.id = event.target.dataset.id
         const coord = event.target.getBoundingClientRect()
+        console.log(coord)
         const horizontal = coord.left 
         const vertical = coord.top 
         this.colorTool.style.transform = `translate(${horizontal}px , ${vertical}px)`
@@ -140,7 +136,6 @@ class App{
     }
     editColor(color)
     {
-        console.log(this.id)
        this.notes =  this.notes.map(el=>{
             return el.id === Number(this.id) ? {...el, color } : el
         })
@@ -252,14 +247,14 @@ class App{
         if (haveNote){
             const noteHtml =  noteArray.map((el)=>{
                 const lenOfChar = el.text.split(" ")
-                const textWord = lenOfChar.length > 50 ? lenOfChar.slice(0, 60) : lenOfChar
+                const textWord = lenOfChar.length > 40 ? lenOfChar.slice(0, 40) : lenOfChar
                 const limitedArray = textWord.map((els)=>{
                     return els
                 }).join(" ")
                 return ` 
                 <div class="note" style="background: ${el.color}" data-id = "${el.id}">
                     <div class="${el.title && 'note-title'}" >${el.title}</div>
-                    <div class="note-text">${this.htmlEncode(limitedArray)}</div>
+                    <div class="note-text">${limitedArray}</div>
                     <div class="tools">
                         <span class="material-symbols-outlined" id="delete-icon" data-id = "${el.id}">
                                 delete
