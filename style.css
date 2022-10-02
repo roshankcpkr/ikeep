@@ -201,7 +201,10 @@ input:focus{
     transition-property: background, border, opacity, box-shadow, transform;
     transition-timing-function: ease-in;
 }
-
+.material-symbols-outlined
+{
+ pointer-events: none;   
+}
 .note:hover{
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
     0 1px 3px 1px rgba(60, 64, 67, 0.149);
