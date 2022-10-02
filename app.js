@@ -18,6 +18,8 @@ class App{
         this.modalClose = document.querySelector('.modal-close')
         this.searchBar = document.querySelector('.searchbar')
         this.colorTool = document.querySelector('#color-tool')
+        this.searchIcon = document.querySelector('#search_icon')
+        this.searchBarFocus = document.querySelector('#search_bar')
         this.render()
         this.addEventListeners() 
     }
@@ -72,6 +74,9 @@ class App{
             event.preventDefault()
             this.searchNote(event)
         })
+        this.searchIcon.addEventListener("click",()=>{
+            this.searchBarFocus.focus()
+        }) 
 
     }
     handleFormClick(event)
@@ -277,10 +282,3 @@ class App{
 
 }
 new App()
-
-
-
-// for auto input focus
-document.getElementById('search_icon').addEventListener('click',(()=>{
-    document.getElementById('search_bar').focus()
-}))
