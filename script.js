@@ -31,6 +31,7 @@ if (theme === "dark") {
     defaultColor.setAttribute("data-color", "white");
     notes.forEach((note) => {
         note.style.backgroundColor = "white";
+        note.style.color = "black";
     });
 }
 
