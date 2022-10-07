@@ -400,7 +400,9 @@ nav ul {
   display: flex;
   padding: 0.3em;
   justify-content: flex-end;
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 #delete-icon {
   display: block;
@@ -442,7 +444,7 @@ nav ul {
   border: 1px solid black;
 }
 #white {
-  background-color: #fff;
+  background-color: #ffc;
 }
 #red {
   background-color: rgb(211, 35, 35);
@@ -474,7 +476,7 @@ nav ul {
     border: 1px solid black;
 }
 #white{
-    background-color: #fff;
+    background-color: #ffc;
 }
 #red{
     background-color: rgb(211, 35, 35);
@@ -512,4 +514,55 @@ footer
 
 #search_icon{
     cursor: pointer;
+}
+
+
+/*
+style notes as a post it
+*/
+
+.color_post_it{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  background:#ffc;
+  display:block;
+  height:15em;
+  padding:1em;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.color_post_it{
+  -webkit-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -moz-transform:rotate(-2deg);
+}
+
+.color_post_it:nth-child(even) {
+  -o-transform:rotate(2deg);
+  -webkit-transform:rotate(2deg);
+  -moz-transform:rotate(2deg);
+  position:relative;
+  top:5px;
+}
+
+.color_post_it:nth-child(3n){
+  -o-transform:rotate(-2deg);
+  -webkit-transform:rotate(-2deg);
+  -moz-transform:rotate(-2deg);
+  position:relative;
+  top:-5px;
+}
+
+.color_post_it:nth-child(5n){
+  -o-transform:rotate(3deg);
+  -webkit-transform:rotate(3deg);
+  -moz-transform:rotate(3deg);
+  position:relative;
+  top:-10px;
 }
