@@ -208,7 +208,7 @@ class App{
         const newNote = {
             title: note.title,
             text: note.text,
-            color: "white",
+            color: "#ffc",
             id: this.notes.length > 0 ? this.notes[this.notes.length - 1].id + 1 : 1
         }
         this.notes = [...this.notes, newNote]
@@ -254,6 +254,7 @@ class App{
         else{
             this.placeholder.style.display = "flex"
         }
+        console.log(noteArray);
         if (haveNote){
             const noteHtml =  noteArray.map((el)=>{
                 const lenOfChar = el.text.split(" ")
@@ -262,7 +263,7 @@ class App{
                     return els
                 }).join(" ")
                 return ` 
-                <div class="note" style="background: ${el.color}" data-id = "${el.id}">
+                <div class="note color_post_it" style="background: ${el.color}" data-id = "${el.id}">
                     <div class="${el.title && 'note-title'}" >${el.title}</div>
                     <div class="note-text">${this.htmlEncode(limitedArray)}</div>
                     <div class="tools">

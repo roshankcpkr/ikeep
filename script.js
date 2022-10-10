@@ -8,6 +8,7 @@ let defaultColor = document.getElementById("default");
 let notes = document.querySelectorAll(".note");
 
 let theme = localStorage.getItem("theme");
+const defaultBackground = "#ffc";
 console.log(theme);
 
 if (theme === "dark") {
@@ -19,7 +20,7 @@ if (theme === "dark") {
   theme = "light";
   defaultColor.setAttribute("data-color", "black");
   notes.forEach((note) => {
-    note.style.backgroundColor = "black";
+    note.style.backgroundColor = defaultBackground;
   });
 } else {
     localStorage.setItem("theme", "light");
@@ -28,9 +29,9 @@ if (theme === "dark") {
     group.style.display = "none";
     path.style.display = "block";
     theme = "dark";
-    defaultColor.setAttribute("data-color", "white");
+    defaultColor.setAttribute("data-color", defaultBackground);
     notes.forEach((note) => {
-        note.style.backgroundColor = "white";
+        note.style.backgroundColor = defaultBackground;
         note.style.color = "black";
     });
 }
@@ -45,7 +46,7 @@ btn.addEventListener("click", () => {
         theme = "light";
         defaultColor.setAttribute("data-color", "black");
         notes.forEach((note) => {
-            note.style.backgroundColor = "black";
+            note.style.backgroundColor = defaultBackground;
             note.style.color = "black";
         });
     } else {
@@ -55,9 +56,9 @@ btn.addEventListener("click", () => {
     group.style.display = "none";
     path.style.display = "block";
     theme = "dark";
-    defaultColor.setAttribute("data-color", "white");
+    defaultColor.setAttribute("data-color", defaultBackground);
     notes.forEach((note) => {
-        note.style.backgroundColor = "white";
+        note.style.backgroundColor = defaultBackground;
         note.style.color = "black";
     });
 }
@@ -65,9 +66,9 @@ btn.addEventListener("click", () => {
 
 if (theme === "undefined") {
     theme = "light";
-    defaultColor.setAttribute("data-color", "white");
+    defaultColor.setAttribute("data-color", defaultBackground);
     notes.forEach((note) => {
-      note.style.backgroundColor = "white";
+      note.style.backgroundColor = defaultBackground;
       note.style.color = "black";
     });
 };
