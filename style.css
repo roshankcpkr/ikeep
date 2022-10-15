@@ -80,11 +80,13 @@ header ul {
 {
     height: 2em;
     margin-right: 0.4em;
+    transition: .2s;
 }
 .ham-icon:hover{
     cursor: pointer;
     border-radius: 50%;
     background-color: rgb(240, 239, 239);
+    transition: .2s;
 }
 .header-title{
     color: #5f6368;
