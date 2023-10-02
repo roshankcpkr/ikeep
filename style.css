@@ -356,6 +356,7 @@ input:focus {
   line-height: 1.5rem;
   outline: none;
   padding-bottom: 10px;
+  resize: none;
 }
 .modal-close {
   float: right;
