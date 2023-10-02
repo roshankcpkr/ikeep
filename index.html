@@ -15,10 +15,10 @@
             <ul>
                 <li><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtMjM3Ljg4IDI1Ny42MWgyNzYuMjVjMTAuODk4IDAgMTkuNzM0IDguODM1OSAxOS43MzQgMTkuNzM0IDAgMTAuODk4LTguODM1OSAxOS43My0xOS43MzQgMTkuNzNoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODMyLTE5LjczNC0xOS43MyAwLTEwLjg5OCA4LjgzNTktMTkuNzM0IDE5LjczNC0xOS43MzR6bTAgOTguNjY0aDI3Ni4yNWMxMC44OTggMCAxOS43MzQgOC44MzIgMTkuNzM0IDE5Ljczcy04LjgzNTkgMTkuNzM0LTE5LjczNCAxOS43MzRoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODM1OS0xOS43MzQtMTkuNzM0czguODM1OS0xOS43MyAxOS43MzQtMTkuNzN6bTAgOTguNjZoMjc2LjI1YzEwLjg5OCAwIDE5LjczNCA4LjgzNTkgMTkuNzM0IDE5LjczNCAwIDEwLjg5OC04LjgzNTkgMTkuNzM0LTE5LjczNCAxOS43MzRoLTI3Ni4yNWMtMTAuODk4IDAtMTkuNzM0LTguODM1OS0xOS43MzQtMTkuNzM0IDAtMTAuODk4IDguODM1OS0xOS43MzQgMTkuNzM0LTE5LjczNHoiIGZpbGw9IiM5YjliOWIiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K" class="ham-icon"></li>
                 <li><img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" class="header-logo"></li>
-                <li><p class="header-title">Keep</p></li>
+                <li><p class="header-title">iKeep</p></li>
                 <li class="inputList">
                     <span class="material-symbols-outlined" id="search_icon">
-                        search
+                        Search
                     </span>
                     <input type="text" placeholder="Search" class="searchbar" id="search_bar">
                 </li>
@@ -40,7 +40,7 @@
                 id="switch"
               >
                 <g>
-                  <circle cx="12" cy="12" r="5"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
                   <line x1="12" y1="1" x2="12" y2="3"></line>
                   <line x1="12" y1="21" x2="12" y2="23"></line>
                   <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
@@ -52,7 +52,7 @@
                 </g>
                 <path
                   class="path"
-                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  d="M21 12.79A9 9 0 1 1 9.21 3 7 7 0 0 0 21 12.79z"
                   style="display: none"
                 ></path>
               </svg>
@@ -63,7 +63,7 @@
         <div class="modal-content">
             <input type="text" placeholder="Title" class="modal-title">
             <!-- <input type="text" placeholder="Take a note..." class="modal-text"> -->
-            <textarea type="text" class="modal-text" placeholder="Take a note..."></textarea>
+            <textarea type="text" class="modal-text" placeholder="Take a note ..."></textarea>
             <span class="modal-close">Close</span>
         </div>
     </div>
@@ -71,12 +71,12 @@
         <div id="form-container">
             <section id="image-holder"></section>
             <form id="form" autocomplete="off">
-                <input id="note-title" placeholder="Title" type="text">
-                <input id="note-text" placeholder="Take a note..." type="text">
+                <input id="note-title" placeholder="Enter Title here . . ." type="text">
+                <input id="note-text" placeholder="Take a note . . ." type="text">
                 <div id="form-buttons">
                     <!-- <input type="file" id="file-input" accept="image/*"> -->
-                    <button type="submit" id="submit-button">Submit</button>
-                    <button type="button" id="form-close">Close</button>
+                    <button type="submit"  id="submit-button//" class="btn-success">Add</button>
+                    <button type="button"  id="form-close" class="btn-danger"><strong>X</strong></button>
                 </div>
             </form>
         </div>
@@ -85,7 +85,7 @@
         </div>
         <div id="placeholder">
             <img id="placeholder-img" src="./lightbulb.png">
-            <p id="placeholder-text">Notes you add appear here</p>
+            <p id="placeholder-text">Notes you add will appear here</p>
         </div>
         <div id="color-tool">
             <div class="color-option" data-color="rgb(255, 95, 240)" id="pink"></div>
