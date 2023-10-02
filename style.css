@@ -119,6 +119,7 @@ header ul {
 }
 .header-logo {
   height: 2em;
+  cursor: pointer;
 }
 .ham-icon {
   height: 2em;
@@ -136,6 +137,7 @@ header ul {
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 0.3em;
+  cursor: pointer;
 }
 .header-title:active {
   text-decoration: underline;
